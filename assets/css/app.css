@@ -1,0 +1,455 @@
+/* Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.5;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ----- GENERAL ----- */
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center; }
+
+/* ----- TIPOGRAFIA ----- */
+h1, h2, h3 {
+	margin-bottom: 15px;
+  color: #48466D; }
+
+h1 {
+  font-family: 'Bree Serif', serif; }
+h2 {
+	font-weight: 300; }
+h3 {
+	font-family: 'Bree Serif', serif;
+	font-size: 22px; }
+
+/* ----- BOTONES ----- */
+.btn-primario {
+  color: #F85F73;
+  background: #FFFFFF;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 5px;
+	-webkit-box-shadow: 0 4px 10px 3px rgba(72, 70, 109, .2);
+  box-shadow: 0 4px 10px 3px rgba(72, 70, 109, .2);
+  padding: 10px 25px;
+	-webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s; }
+	.btn-primario:hover {
+	  color: #48466D;
+		-webkit-box-shadow: 0 5px 15px 5px rgba(72, 70, 109, .3);
+	  box-shadow: 0 5px 15px 5px rgba(72, 70, 109, .3); }
+
+/* ----- CONTENEDORES ----- */
+/* Contenedor en mobile */
+.contenedor {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto; }
+/* Contenedor en mobile horizontal */
+@media screen and (min-width: 576px) {
+	.contenedor {
+	  width: 540px; }
+}
+/* Contenedor en tablet */
+@media screen and (min-width: 768px) {
+	.contenedor {
+	  width: 720px; }
+}
+/* Contenedor en desktop */
+@media screen and (min-width: 992px) {
+	.contenedor {
+	  width: 960px; }
+}
+
+/* ----- SECCIONES ----- */
+/* Inicio: ¿Perdiste a tu perrito? */
+/* Header */
+.header {
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center; }
+	@media screen and (min-width: 768px) {
+		.header {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex; }
+	}
+	.header-content {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;}
+
+/* Nav con JS */
+@media screen and (max-width: 768px){
+	.js .nav {
+		height: 0;
+		overflow: hidden;
+		-webkit-transition: height .5s;
+		-o-transition: height .5s;
+		transition: height .5s;
+		background: #48466D; }
+		.js .nav ul {
+			height: 100%; }
+			.js .nav ul li {
+				padding-top: .5em;
+				padding-bottom: .5em; }
+				.js .nav a {
+					padding: 5px 10px;
+					color: #ffffff; }
+					.js .nav a:hover {
+						-webkit-transition: .3s color;
+						-o-transition: .3s color;
+						transition: .3s color;
+						color: #F85F73; }
+	.js .nav.nav-open {
+		height: 150px; }
+}
+.nav a {
+	display: block;
+	color: #48466D;
+	-webkit-transition: .3s color;
+	-o-transition: .3s color;
+	transition: .3s color; }
+	.nav a:hover {
+		color: #F85F73; }
+.header a {
+	text-decoration: none; }
+	.header a span {
+		font-size: 26px;
+		color: #48466D; }
+@media screen and (min-width : 768px) {
+	.nav-hamburger,
+	.toogle {
+		display: none; }
+	.nav ul {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex; }
+		.nav ul li {
+			margin-left: 1em; }
+}
+/**/
+.inicio {
+	background: rgba(251,232,211,1);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(251,232,211,1)), to(rgba(255,255,255,1)));
+  background: -webkit-linear-gradient(top, rgba(251,232,211,1) 0%, rgba(255,255,255,1) 100%);
+  background: -o-linear-gradient(top, rgba(251,232,211,1) 0%, rgba(255,255,255,1) 100%);
+  background: linear-gradient(to bottom, rgba(251,232,211,1) 0%, rgba(255,255,255,1) 100%); }
+	.inicio-contenedor {
+	  padding-bottom: 3em; }
+		.inicio-info h1 {
+		  font-size: 1.7em; }
+		.inicio-info h2 {
+		  font-size: 1.3em; }
+			.inicio-info h2 span {
+			  font-weight: 700; }
+		.inicio .inicio-img img {
+		  width: 70%; }
+/* ----- RESPONSIVE ----- */
+@media screen and (min-width: 992px) {
+	.inicio-contenedor {
+		display: -webkit-box;
+	  display: -ms-flexbox;
+	  display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		padding-top: 3em;
+		padding-bottom: 5em; }
+	.inicio-info {
+		text-align: left; }
+		.inicio-info h1 {
+		  font-size: 2em; }
+		.inicio-info h2 {
+		  font-size: 1.5em; }
+	.inicio .inicio-img {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	  -webkit-box-pack: end;
+	  -ms-flex-pack: end;
+	  justify-content: flex-end;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center; }
+}
+
+/* ¡3 pasos y Rufus aparece! */
+.pasos {
+  padding-bottom: 25px; }
+	.pasos-articulo {
+	  padding: 15px;
+	  border: 1px solid rgba(72, 70, 109, .2);
+	  -webkit-box-shadow: 0 4px 10px 3px rgba(72, 70, 109, .2);
+	  box-shadow: 0 4px 10px 3px rgba(72, 70, 109, .2);
+	  margin-bottom: 15px;
+	  border-radius: 5px;
+	  display: -webkit-box;
+	  display: -ms-flexbox;
+	  display: flex;
+	  -webkit-box-orient: horizontal;
+	  -webkit-box-direction: normal;
+	  -ms-flex-direction: row;
+	 	flex-direction: row;
+	  -webkit-box-align: start;
+	  -ms-flex-align: start;
+	 	align-items: flex-start; }
+		.pasos-articulo:hover {
+		  -webkit-transition: all .3s;
+		  -o-transition: all .3s;
+		  transition: all .3s;
+		  -webkit-box-shadow: 0 5px 15px 5px rgba(72, 70, 109, .3);
+		  box-shadow: 0 5px 15px 5px rgba(72, 70, 109, .3); }
+		.pasos-articulo .pasos-articulo-icono {
+		  margin-right: 10px }
+		.pasos-articulo .pasos-articulo-info {
+		  text-align: left; }
+			.pasos-articulo .pasos-articulo-info h4 {
+			  font-family: 'Bree Serif', serif;
+			  color: #F85F73;
+			  font-weight: 300;
+			  font-size: 18px;
+			  margin-top: 0;
+			  margin-bottom: 0; }
+			.pasos-articulo .pasos-articulo-info p {
+			  font-weight: 300;
+			  color: #48466D;
+			  margin: 0; }
+/* ----- RESPONSIVE ----- */
+@media screen and (min-width: 992px) {
+	.pasos-contenedor {
+	  display: -webkit-box;
+	  display: -ms-flexbox;
+	  display: flex; }
+	.pasos-articulo {
+		margin: 1em; }
+}
+/* ¿Cómo funciona Rufus? */
+.funciona { }
+	.funciona-tabla {
+	  margin-bottom: 30px; }
+		.funciona-tabla .funciona-tabla-titulo {
+		  background: #48466D;
+		  border-radius: 5px;
+		  padding: 15px;
+		  margin-bottom: 15px;
+		  -webkit-box-shadow: 0 4px 10px 3px rgba(72, 70, 109, .2);
+		  box-shadow: 0 4px 10px 3px rgba(72, 70, 109, .2); }
+			.funciona-tabla .funciona-tabla-titulo h4{
+			  font-family: 'Bree Serif', serif;
+			  font-size: 20px;
+			  color: #F85F73;
+			  margin: 0; }
+		.funciona-tabla .funciona-tabla-cuerpo {
+		  border-radius: 5px;
+		  padding: 5px 20px;
+		  border: 1px solid rgba(72, 70, 109, .13);
+		  color: #48466D;
+		  -webkit-box-shadow: 0 4px 10px 3px rgba(72, 70, 109, .2);
+		  box-shadow: 0 4px 10px 3px rgba(72, 70, 109, .2); }
+			.funciona-tabla .funciona-tabla-cuerpo ul{
+			  list-style-type: none;
+			  padding-left: 0 }
+				.funciona-tabla .funciona-tabla-cuerpo ul li{
+				  padding: 10px 0;
+				  font-weight: 300; }
+		.funciona-tabla .funciona-tabla-titulo:hover,
+		.funciona-tabla .funciona-tabla-cuerpo:hover {
+		  -webkit-transition: all .3s;
+		  -o-transition: all .3s;
+		  transition: all .3s;
+		  -webkit-box-shadow: 0 5px 15px 5px rgba(72, 70, 109, .3);
+		  box-shadow: 0 5px 15px 5px rgba(72, 70, 109, .3); }
+/* ----- RESPONSIVE ----- */
+@media screen and (min-width: 768px) {
+	.funciona-contenedor {
+	  display: -webkit-box;
+	  display: -ms-flexbox;
+	  display: flex; }
+	.funciona-tabla {
+	  width: 50%;
+		padding: 1em; }
+}
+
+/* Descarga la app y encuentra a tu perrito */
+.descarga {
+  padding-top: 25px;
+  padding-bottom: 50px; }
+	.descarga .descarga-form {
+	  width: 100%; }
+		.descarga .descarga-form input{
+		  width: 100%;
+		  padding: 20px;
+		  margin-bottom: 20px;
+		  outline: 0;
+		  border: 1px solid rgba(72, 70, 109, .2);
+		  border-radius: 5px;
+		  -webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		  -webkit-box-shadow: 0 4px 10px 3px rgba(72, 70, 109, .2);
+			box-shadow: 0 4px 10px 3px rgba(72, 70, 109, .2);
+		  font-size: 16px;
+		  font-weight: 300;
+		  -webkit-appearance: none; }
+			.descarga .descarga-form input::-webkit-input-placeholder{
+			  color: #48466D;
+			  opacity: .5; }
+			.descarga .descarga-form input:-ms-input-placeholder{
+			  color: #48466D;
+			  opacity: .5; }
+			.descarga .descarga-form input::-ms-input-placeholder{
+			  color: #48466D;
+			  opacity: .5; }
+			.descarga .descarga-form input::placeholder{
+			  color: #48466D;
+			  opacity: .5; }
+		.descarga .descarga-form button{
+		  width: 100%;
+		  padding: 20px;
+		  margin-bottom: 20px;
+		  outline: 0;
+		  border: 0;
+		  border-radius: 5px;
+		  -webkit-box-sizing: border-box;
+		  box-sizing: border-box;
+		  -webkit-box-shadow: 0 4px 10px 3px rgba(72, 70, 109, .2);
+		  box-shadow: 0 4px 10px 3px rgba(72, 70, 109, .2);
+		  font-size: 18px;
+		  color: #F85F73;
+		  background: #FFFFFF;
+		  cursor: pointer;
+		  -webkit-transition: all .3s;
+		  -o-transition: all .3s;
+		  transition: all .3s; }
+			.descarga .descarga-form button:hover,
+			.descarga .descarga-form button:active,
+			.descarga .descarga-form button:focus{
+			  background: #F85F73;
+			  color: #FFFFFF; }
+/* ----- RESPONSIVE ----- */
+@media screen and (min-width: 768px) {
+	.descarga {
+	  padding-top: 3em;
+	  padding-bottom: 5em; }
+		.descarga .descarga-form {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-ms-flex-pack: distribute;
+			justify-content: space-around; }
+			.descarga .descarga-form input{
+				margin-right: .5em;
+				margin-bottom: 0; }
+			.descarga .descarga-form button{
+				margin-bottom: 0; }
+}
+
+/* Footer */
+.footer {
+  background: #48466D; }
+	.footer .footer-contenedor {
+	  padding: 20px 0;
+	  display: -webkit-box;
+	  display: -ms-flexbox;
+	  display: flex;
+	  -webkit-box-orient: horizontal;
+	  -webkit-box-direction: normal;
+	  -ms-flex-direction: row;
+	  flex-direction: row;
+	  -webkit-box-align: center;
+	  -ms-flex-align: center;
+	  align-items: center; }
+		.footer img {
+		  margin-right: 20px; }
+		.footer p {
+		  color: #FFFFFF;
+		  text-align: left;
+		  font-weight: 300; }
+			.footer p span {
+			  font-weight: 700; }
+
+/* PÁGINA GRACIAS */
+.gracias {
+	/*width: 100vw;
+	height: 100vh;*/
+	/*background-color: #48466D;
+	background-repeat: no-repeat;
+	background-image: url('../img/bg_dog.jpg');*/
+	background: #48466D url('../img/bg_dog.jpg') no-repeat;
+	background-position: center;
+	background-size: cover; }
+	.gracias article {
+		width: 100vw;
+		height: 100vh;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column; }
+		.gracias article h1 {
+			color: #ffffff; }
+		.gracias article h2 {
+			color: #ffffff; }
